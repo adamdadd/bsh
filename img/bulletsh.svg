@@ -1,0 +1,16 @@
+<svg width="411" height="104" xmlns="http://www.w3.org/2000/svg">
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <g stroke="null" id="svg_28">
+   <line stroke="#000" stroke-width="9" id="svg_24" y2="97" x2="350.8961" y1="5" x1="350.8961" fill="#ffffff"/>
+   <line stroke="#000" stroke-width="9" id="svg_25" y2="97" x2="381.02597" y1="5" x1="381.02597" fill="#ffffff"/>
+   <line stroke="#000" stroke-width="9" id="svg_26" y2="38.89474" x2="407" y1="38.89474" x1="328.03896" fill="#ffffff"/>
+   <line stroke="#000" stroke-width="9" id="svg_27" y2="66.73684" x2="405.96104" y1="66.73684" x1="327" fill="#ffffff"/>
+  </g>
+  <g stroke="null" id="svg_29">
+   <ellipse stroke="#000" stroke-width="0" ry="51.89656" rx="31.0265" id="svg_3" cy="51.5" cx="200.97348" fill="#DDDDDD"/>
+   <rect stroke="#000" stroke-width="0" id="svg_1" height="105.00001" width="197.89879" y="-1.00001" x="0" fill="#444444"/>
+  </g>
+  <text transform="matrix(7.4656 0 0 4.89513 -3982.6 -1301.43)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" id="svg_38" y="283.80759" x="565.23333" stroke-width="0" fill="#000000">$</text>
+ </g>
+</svg>
