@@ -4,7 +4,7 @@
 Bsh is a shell wrapper that sends push notifications using pushbullet.
 
 ## Prerequisites
-- python 3.5+
+- python 3.7+
 
 ## Running using python
 ```shell
