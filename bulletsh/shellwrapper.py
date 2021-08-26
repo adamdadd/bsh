@@ -15,4 +15,4 @@ class ShellWrapper(Cmd):
     def default(self, line):
         proc = subprocess.run(line.split(' '), stderr=subprocess.PIPE, text=True)
         pb = Pushbullet(self.token)
-        pb.push_note(line, proc.stderr) if proc.returncode != 0 else pb.push_note(line, "rcode: " + str(proc.returncode))
+        pb.push_note(line, proc.stderr) if proc.returncode != 0 else pb.push_note(line, "rcode: " + str(proc.returncode) + "\nSUCCESS!")
