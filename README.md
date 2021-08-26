@@ -13,7 +13,20 @@ pip install -r requirements.txt
 
 ## Running using python
 ```bash
-python -m bulletsh
+python3 -m bulletsh
+```
+
+## Compiling to binary
+```bash
+python3 setup.py build
+```
+
+This should create a binary in the build folder
+
+symlink binary to PATH
+
+```
+ln -s <full_path_to_binary> <PATH>
 ```
 
 ## Contribution
