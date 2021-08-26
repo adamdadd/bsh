@@ -5,6 +5,14 @@ Bsh is a shell wrapper that sends push notifications using pushbullet.
 
 ## Prerequisites
 - python 3.7+
+- free pushbullet account
+
+Create api token for your pushbullet account from [Account Settings](https://www.pushbullet.com/#settings/account)
+
+Add this token to the first line of a text file in the path:
+```
+$HOME/.bulletsh/token.txt
+```
 
 ## Installing Depenencies
 ```bash
