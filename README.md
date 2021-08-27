@@ -19,12 +19,7 @@ $HOME/.bulletsh/token.txt
 pip install -r requirements.txt
 ```
 
-## Running using python
-```bash
-python3 -m bulletsh
-```
-
-## Compiling to binary
+## Compiling to binary (Recommended)
 ```bash
 python3 setup.py build
 ```
@@ -37,9 +32,20 @@ symlink binary to PATH
 ln -s <full_path_to_binary> <PATH>
 ```
 
+### Running binary
+Run from any shell
+```bash
+bsh
+```
+
+## Running using python
+```bash
+python3 -m bulletsh
+```
+
 ## Contribution
 Feel free to submit pull requests or issues :)
 
 ## LICENSE
-[MIT License](./LINCENSE)
+[MIT License](./LICENSE)
 
