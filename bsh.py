@@ -2,6 +2,22 @@ from pathlib import Path
 
 from bulletsh import Bulletsh
 
+logo = """
+Here Comes the Sun!
+
+     ______
+    /_____/\\\\
+   /_____\\\\ \\\\
+  /_____\ \\\\ /
+ /_____/ \/ / /
+/_____/ /   \//\\
+\_____\//\   / /
+ \_____/ / /\ /
+  \_____/ \\\\ \\
+   \_____\ \\\\
+    \_____\/
+"""
+
 
 if __name__ == '__main__':
 
@@ -14,6 +30,6 @@ if __name__ == '__main__':
     except FileNotFoundError:
         print("Missing token in path " + token_path)
     
-    print("\n\n\nBullet Shell ####>\n\n\n")
+    print(logo)
     
     Bulletsh(lines[0].strip("\n"))
