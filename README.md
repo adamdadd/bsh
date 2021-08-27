@@ -14,7 +14,7 @@ Add this token to the first line of a text file in the path:
 $HOME/.bulletsh/token.txt
 ```
 
-## Installing Depenencies
+## Installing Dependencies
 ```bash
 pip install -r requirements.txt
 ```
