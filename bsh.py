@@ -32,4 +32,8 @@ if __name__ == '__main__':
     
     print(logo)
     
-    Bulletsh(lines[0].strip("\n"))
+while (True):
+    try:
+        Bulletsh(lines[0].strip("\n"))
+    except FileNotFoundError:
+        print("Unrecognised Command")
