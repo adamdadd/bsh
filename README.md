@@ -28,7 +28,7 @@ python3 -m bulletsh
 
 ## Compiling to binary
 ```bash
-python3 setup.py build
+python3 setup_cx.py build
 ```
 
 This should create a binary in the build folder
