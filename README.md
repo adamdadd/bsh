@@ -14,12 +14,19 @@ Add this token to the first line of a text file in the path:
 $HOME/.bulletsh/token.txt
 ```
 
-## Installing Dependencies
+## Running using python
+### Installing package
 ```bash
-pip install -r requirements.txt
+python setup.py install
 ```
 
-## Compiling to binary (Recommended)
+### Running as python module
+Can be run as module using following command in any shell:
+```bash
+python3 -m bulletsh
+```
+
+## Compiling to binary
 ```bash
 python3 setup.py build
 ```
@@ -32,15 +39,16 @@ symlink binary to PATH
 ln -s <full_path_to_binary> <PATH>
 ```
 
-### Running binary
-Run from any shell
+### Running
+Run command in any shell
 ```bash
 bsh
 ```
 
-## Running using python
+### Running shell command
+Run from any shell
 ```bash
-python3 -m bulletsh
+bsh
 ```
 
 ## Contribution
