@@ -12,8 +12,6 @@ try:
 except FileNotFoundError:
     print("Missing token in path " + token_path)
 
-print("\n\n\nBullet Shell ####>\n\n\n")
-
 while (True):
     try:
         Bulletsh(lines[0].strip("\n"))
