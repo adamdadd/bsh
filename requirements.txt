@@ -1,1 +1,3 @@
-pushbullet.py
+pushbullet.py~=0.12.0
+
+requests~=2.26.0

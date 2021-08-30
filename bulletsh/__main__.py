@@ -1,4 +1,5 @@
 from pathlib import Path
+from requests import ConnectionError
 
 from bulletsh import Bulletsh
 
@@ -16,5 +17,7 @@ print("\n\n\nBullet Shell ####>\n\n\n")
 while (True):
     try:
         Bulletsh(lines[0].strip("\n"))
-    except Exception:
+    except FileNotFoundError:
         print("Unrecognised Command")
+    except ConnectionError:
+        print("Unable to connect to server")
