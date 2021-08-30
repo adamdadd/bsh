@@ -4,8 +4,9 @@ import sys
 import time
 from cmd import Cmd
 
-from pushbullet import Pushbullet
+from pushbullet import Pushbullet, InvalidKeyError
 
+from bulletsh.Exceptions.invalid_token_exception import InvalidTokenException
 
 logo = """
 Here Comes the Sun!
@@ -21,6 +22,7 @@ Here Comes the Sun!
    \_____\ \\\\
     \_____\/
 """
+
 
 class ShellWrapper(Cmd):
     intro = logo
@@ -38,17 +40,21 @@ class ShellWrapper(Cmd):
             note_body_failure = str(process.stderr) + "\nFAILED :("
         else:
             note_body_failure = str(process.returncode) + "\nFAILED :("
-        note_body_success = "rcode: " + str(process.returncode) + "\nSUCCESS!" + "\nCompleted in: " + str(round(completion_time/60, 3)) + "m"
+        note_body_success = "rcode: " + str(process.returncode) + "\nSUCCESS!" + "\nCompleted in: " + str(
+            round(completion_time / 60, 3)) + "m"
 
-        pb = Pushbullet(self.token)
-        pb.push_note(line, note_body_failure) if process.returncode != 0 else pb.push_note(line, note_body_success)
+        try:
+            pb = Pushbullet(self.token)
+            pb.push_note(line, note_body_failure) if process.returncode != 0 else pb.push_note(line, note_body_success)
+        except InvalidKeyError:
+            raise InvalidTokenException()
 
     def default(self, line) -> None:
         parsed_line = self.parse_line(line)
         start_time = time.perf_counter()
         proc = subprocess.run(parsed_line, stderr=subprocess.PIPE, text=True)
         end_time = time.perf_counter()
-        self.push_result(line, proc, end_time-start_time)
+        self.push_result(line, proc, end_time - start_time)
 
     def parse_line(self, line) -> list:
         line_list = line.split(' ')

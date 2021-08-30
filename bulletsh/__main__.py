@@ -10,9 +10,9 @@ try:
     with open(token_path) as f:
         lines = f.readlines()
 except FileNotFoundError:
-    print("Missing token in path " + token_path)
+    print("Missing token in path: " + token_path)
 
-while (True):
+while True:
     try:
         Bulletsh(lines[0].strip("\n"))
     except FileNotFoundError:
