@@ -36,10 +36,8 @@ class ShellWrapper(Cmd):
         self.secret = False
 
     def push_result(self, line, process, completion_time) -> None:
-        if not self.secret:
-            note_body_failure = str(process.stderr) + "\nFAILED :("
-        else:
-            note_body_failure = str(process.returncode) + "\nFAILED :("
+        note_body_failure = str(process.stderr) + "\nFAILED :(" if not self.secret else str(
+            process.returncode) + "\nFAILED :("
         note_body_success = "rcode: " + str(process.returncode) + "\nSUCCESS!" + "\nCompleted in: " + str(
             round(completion_time / 60, 3)) + "m"
 
@@ -73,11 +71,16 @@ class ShellWrapper(Cmd):
         self.prompt = "bsh | " + os.getcwd() + " ###>"
 
     def do_ls(self, line) -> None:
+        print("\nDir Ordered by Filesize:\n")
         subprocess.run(["ls", "-lahS"])
 
     def do_gitlog(self, line) -> None:
         subprocess.run(["git", "log", "--all", "--decorate", "--graph", "--oneline"])
 
     def do_q(self, line) -> None:
+        print("bye :'(")
+        sys.exit()
+
+    def do_exit(self, line) -> None:
         print("bye :'(")
         sys.exit()
