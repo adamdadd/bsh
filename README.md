@@ -17,13 +17,19 @@ $HOME/.bulletsh/token.txt
 ## Running using python
 ### Installing package
 ```bash
-python setup.py install
+pip install .
 ```
 
 ### Running as python module
 Can be run as module using following command in any shell:
 ```bash
 python3 -m bulletsh
+```
+
+### Running
+Run command in any shell
+```bash
+bsh
 ```
 
 ## Compiling to binary
@@ -37,12 +43,6 @@ symlink binary to PATH
 
 ```
 ln -s <full_path_to_binary> <PATH>
-```
-
-### Running
-Run command in any shell
-```bash
-bsh
 ```
 
 ### Running shell command
