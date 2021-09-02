@@ -1,4 +1,5 @@
 import os
+import shlex
 import subprocess
 import sys
 import time
@@ -55,7 +56,7 @@ class ShellWrapper(Cmd):
         self.push_result(line, proc, end_time - start_time)
 
     def parse_line(self, line) -> list:
-        line_list = line.split(' ')
+        line_list = shlex.split(line);
         secret_option = "--secret"
         if self._is_option_in_line(line_list, secret_option):
             line_list.remove(secret_option)
