@@ -1,7 +1,7 @@
 # Bulletsh
 ![img](img/bulletsh.svg)
 
-Bsh is a shell wrapper that sends push notifications using pushbullet.
+Bsh is a shell wrapper that sends push notifications using pushbullet. On success or failure of any bash command run get a notification on your phone. No babysitting scripts, set them off and come back when they've failed or completed.
 
 ## Prerequisites
 - python 3.7+
